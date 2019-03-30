@@ -60,7 +60,21 @@ En sortie:
  */
 
 function getMoviesFreshness(movies) {
-}
+  return movies.map(function(cara) {
+    if (cara.rating < 60){
+      cara.label = 'rotten'
+      return cara
+    }
+    else if (cara.rating >= 60 && cara.rating <= 75){
+      cara.label = 'fresh'
+      return cara}
+    else{
+      cara.label = 'certified fresh'
+      return cara
+    }
+  });
+};
+
 
 
 
